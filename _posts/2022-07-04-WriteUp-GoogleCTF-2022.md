@@ -13,7 +13,7 @@ First time solving challenges from Google CTF, I feel pretty good but I have to 
 | MAYBE SOMEDAY | 35 solves | Write later |
 
 # ELECTRIC MAYHEM CLS
-## Description
+## Challenge
 ```
 The server presents power traces of a secret firmware crypto operation. The goal is to recover the secret key.
 Note, the flag is 'CTF{XXX}' where XXX is your recovered key.
@@ -77,7 +77,7 @@ int main() {
   return 0;
 }
 ```
-
+## Solution
 Look again with the web in the description, I see lots of plaintexts and each one have a graph to performs the trace.
 
 ![Trace each plaintext](/assets/images/google/gg1.png)
@@ -226,9 +226,9 @@ if __name__ == '__main__':
 ```
 
 And the key is : **`W0ckAwocKaWoCka1`**
-**Flag: `CTF{W0ckAwocKaWoCka1}`**
+#### **Flag: `CTF{W0ckAwocKaWoCka1}`**
 # CYCLING
-## Source
+## Challenge
 ```python
 #!/usr/bin/python3
 
@@ -285,6 +285,7 @@ assert ct == pow(pt, e, n)
 # Print flag:
 print(pt.to_bytes((pt.bit_length() + 7)//8, 'big').decode())
 ```
+## Solution
 At first, in the source code, they use [**cycle attack on RSA**](https://crypto.stackexchange.com/questions/1572/cycle-attack-on-rsa) which can be summarized as follows:
 
 $$Compute \ {m^e} \ mod(n), \  m^{e^2} \ mod(n), \dots \ util  \ finding \ some \ k: m^{e^k} \ mod(n) = m \ mod(n)$$
@@ -349,5 +350,5 @@ for i in test:
 d = inverse(e,phi)
 print(long_to_bytes(pow(ct,d,n)))
 ```
-**Flag: `CTF{Recycling_Is_Great}`**
+#### **Flag: `CTF{Recycling_Is_Great}`**
 <!--more-->
