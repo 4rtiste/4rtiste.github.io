@@ -1,6 +1,6 @@
 ---
 title: Writeup GoogleCTF 2022
-tags: CTF, cryptography
+tags: CTF cryptography
 cover: /assets/images/google/google.png
 ---
 
