@@ -1,6 +1,6 @@
 ---
-title: Test markdown
-tags: TeXt
+title: Writeup Google CTF 2022
+tags: CTF, cryptography
 cover: /assets/images/google/google.png
 ---
 
