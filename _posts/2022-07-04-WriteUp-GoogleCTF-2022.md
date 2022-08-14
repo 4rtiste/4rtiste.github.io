@@ -227,7 +227,9 @@ if __name__ == '__main__':
 
 And the key is : **`W0ckAwocKaWoCka1`**
 
-Flag: `CTF{W0ckAwocKaWoCka1`. {:.success}
+**Flag: `CTF{W0ckAwocKaWoCka1`** 
+{:.success}
+
 # CYCLING
 ## Challenge
 ```python
@@ -351,5 +353,7 @@ for i in test:
 d = inverse(e,phi)
 print(long_to_bytes(pow(ct,d,n)))
 ```
-Flag: CTF{Recycling_Is_Great} {:.success}
+**Flag: `CTF{Recycling_Is_Great}`** 
+{:.success}
+
 <!--more-->
