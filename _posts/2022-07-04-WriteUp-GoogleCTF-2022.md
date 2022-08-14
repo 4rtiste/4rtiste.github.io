@@ -232,7 +232,7 @@ And the key is : **`W0ckAwocKaWoCka1`**
 
 # CYCLING
 ## Challenge
-```python
+```py
 #!/usr/bin/python3
 
 # Copyright 2022 Google LLC
