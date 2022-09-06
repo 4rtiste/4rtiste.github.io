@@ -5,7 +5,7 @@ cover: /assets/images/balsn/balsn.png
 ---
 
 ## Challenge
-RSA, but with hint.
+"RSA, but with hint."
 ```py
 from Crypto.Util.number import *
 from secret import flag
