@@ -11,7 +11,7 @@ cover: /assets/images/overthewire/bandit/bandit.png
 </p>
 
 First, we find out all options off **`ssh`**{:.warning} with the command:
-```zsh
+```console
 ┌──(kali㉿kali)-[~]
 └─$ ssh   
 usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
@@ -23,7 +23,7 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
            [-w local_tun[:remote_tun]] destination [command [argument ...]]
 ```
 Option **`-p`{:.warning}** is the port. So, if we want to connect the host **`bandit.labs.overthewire.org`** with port **`2220`** and the username is **`bandit0`**, we could use: **`ssh bandit0@bandit.labs.overthewire.org -p 2220`{:.warning}**.
-```zsh
+```console
 ┌──(kali㉿kali)-[~]
 └─$ ssh bandit0@bandit.labs.overthewire.org -p 2220
                          _                     _ _ _   
@@ -59,7 +59,7 @@ bandit0@bandit.labs.overthewire.org's password:
 </p>
 
 After login with username **`bandit0`**, found **`readme`** file with command **`ls`{:.warning}** and the target is just access file.
-```zsh
+```console
 bandit0@bandit:~$ ls
 readme
 bandit0@bandit:~$ cat readme 
@@ -74,12 +74,12 @@ NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 </p>
 
 Login bandit1 with the password abose. At this time, when using **`ls`{:.warning}**, but this time there is no **`readme`** file but just one Dash (symbol **`-`**) exist. 
-```zsh
+```console
 bandit1@bandit:~$ ls
 -
 ```
 When you cat that file, it will get stuck because The Dash interprets it as a synonym for STDIN. In [**Dashed Filename – Learn How to Create, Remove, List, Read & Copy!**](https://www.webservertalk.com/dashed-filename), there are ways to access filename starting with Dash: Using **`cat < -`{:.warning}** or **`cat ./-`{:.warning}**.
-```zsh
+```console
 bandit1@bandit:~$ cat ./-
 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 bandit1@bandit:~$ cat < -
