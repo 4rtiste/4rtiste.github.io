@@ -94,12 +94,12 @@ rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 </p>
 
 This time, we have a file which has space in name. 
-```zsh
+```console
 bandit2@bandit:~$ ls
 spaces in this filename
 ```
 To cat the file, we can write filename as string by double quote or use the **`\`** symbol.
-```zsh
+```console
 bandit2@bandit:~$ cat "spaces in this filename"
 aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 bandit2@bandit:~$ cat spaces\ in\ this\ filename 
