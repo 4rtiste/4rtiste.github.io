@@ -21,7 +21,7 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
            [-w local_tun[:remote_tun]] destination [command [argument ...]]
 ```
 Option **`-p`** is the port. So, if we want to connect the host **`bandit.labs.overthewire.org`** with port **`2220`** and the username is **`bandit0`**, we could use: **`ssh bandit0@bandit.labs.overthewire.org -p 2220`{:.warning}**.
-```bash
+```zsh
 ┌──(kali㉿kali)-[~]
 └─$ ssh bandit0@bandit.labs.overthewire.org -p 2220
                          _                     _ _ _   
@@ -50,7 +50,8 @@ bandit0@bandit.labs.overthewire.org's password:
      \   \ .'        ;   |.'       \   \ ;
   www. `---` ver     '---' he       '---" ire.org
 ```
-After that, found **`readme`** file and just access file.
+# Level 0 → Level 1
+After login with username **`bandit0`**, found **`readme`** file with command **`ls`** and the target is just access file.
 ```zsh
 bandit0@bandit:~$ ls
 readme
