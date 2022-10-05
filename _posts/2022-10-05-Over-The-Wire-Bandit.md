@@ -58,7 +58,7 @@ bandit0@bandit.labs.overthewire.org's password:
 ---
 </p>
 
-After login with username **`bandit0`**, found **`readme`** file with command **`ls`{:.warning}** and the target is just access file.
+After login with username **`bandit0`**, found **`readme`** file with command **`ls`{:.warning}** and the target is just access file. To access `readme`, we could use command **`cat`{:.warning}**.
 ```zsh
 bandit0@bandit:~$ ls
 readme
@@ -98,7 +98,7 @@ This time, we have a file which has space in name.
 bandit2@bandit:~$ ls
 spaces in this filename
 ```
-To cat the file, we can write filename as string by double quote or use the **`\`** symbol.
+To cat the file, we can write filename as string by double quote or use the **`\`{:.warning}** symbol.
 ```zsh
 bandit2@bandit:~$ cat "spaces in this filename"
 aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
@@ -106,4 +106,35 @@ bandit2@bandit:~$ cat spaces\ in\ this\ filename
 aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
 ```
 **Password: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG**
+{:.success}
+# Level 3 → Level 4
+*"The password for the next level is stored in a hidden file in the inhere directory."*
+<p align="center">
+---
+</p>
+
+This time we have a folder `inhere`, but in normal view, there's nothing in folder.
+```zsh
+bandit3@bandit:~$ cd inhere/
+bandit3@bandit:~/inhere$ ls
+bandit3@bandit:~/inhere$ 
+```
+Trying using command **`ls`{:.warning}** again. But this time, we put 2 option: **`-a`{:.warning}** and **`-1`{:.warning}**.
+
+- **`-a`{:.warning}**: listing all file, do not ignore entries starting with **`.`{:.warning}**
+- **`-1`{:.warning}**: list one file per line.
+
+So the full command is: **`ls -a1`{:.warning}**
+```zsh
+bandit3@bandit:~/inhere$ ls -a1
+.
+..
+.hidden
+```
+Now we just access the file and get password.
+```zsh
+bandit3@bandit:~/inhere$ cat .hidden 
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+```
+**Password: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe**
 {:.success}
