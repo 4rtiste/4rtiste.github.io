@@ -20,7 +20,7 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
            [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
            [-w local_tun[:remote_tun]] destination [command [argument ...]]
 ```
-Option **`-p`**{:.warning} is the port. So, if we want to connect the host **`bandit.labs.overthewire.org`** with port **`2220`** and the username is **`bandit0`**, we could use: **`ssh bandit0@bandit.labs.overthewire.org -p 2220`{:.warning}**.
+Option **`-p`{:.warning}** is the port. So, if we want to connect the host **`bandit.labs.overthewire.org`** with port **`2220`** and the username is **`bandit0`**, we could use: **`ssh bandit0@bandit.labs.overthewire.org -p 2220`{:.warning}**.
 ```zsh
 ┌──(kali㉿kali)-[~]
 └─$ ssh bandit0@bandit.labs.overthewire.org -p 2220
@@ -51,7 +51,7 @@ bandit0@bandit.labs.overthewire.org's password:
   www. `---` ver     '---' he       '---" ire.org
 ```
 # Level 0 → Level 1
-After login with username **`bandit0`**, found **`readme`** file with command **`ls`**{:.warning} and the target is just access file.
+After login with username **`bandit0`**, found **`readme`** file with command **`ls`{:.warning}** and the target is just access file.
 ```zsh
 bandit0@bandit:~$ ls
 readme
@@ -61,12 +61,12 @@ NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 **Password: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL**
 {:.success}
 # Level 1 → Level 2
-Login bandit1 with the password abose. At this time, when using **`ls`**{:.warning}, but this time there is no **`readme`** file but just one Dash (symbol **`-`**) exist. 
+Login bandit1 with the password abose. At this time, when using **`ls`{:.warning}**, but this time there is no **`readme`** file but just one Dash (symbol **`-`**) exist. 
 ```zsh
 bandit1@bandit:~$ ls
 -
 ```
-In [**Dashed Filename – Learn How to Create, Remove, List, Read & Copy!**](https://www.webservertalk.com/dashed-filename), there are ways to access filename starting with Dash: Using **`cat < -`**{:.warning} or **`cat ./-`**{:.warning}.
+In [**Dashed Filename – Learn How to Create, Remove, List, Read & Copy!**](https://www.webservertalk.com/dashed-filename), there are ways to access filename starting with Dash: Using **`cat < -`{:.warning}** or **`cat ./-`{:.warning}**.
 ```zsh
 bandit1@bandit:~$ cat ./-
 rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
