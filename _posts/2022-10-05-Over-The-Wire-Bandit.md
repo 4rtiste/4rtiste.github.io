@@ -8,7 +8,7 @@ cover: /assets/images/overthewire/bandit/bandit.png
 ```
 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 ```
-First, we find out all options off `ssh`{:.info} with the command:
+First, we find out all options off `ssh`{:.warning} with the command:
 ```zsh
 ┌──(kali㉿kali)-[~]
 └─$ ssh   
@@ -20,7 +20,4 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
            [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
            [-w local_tun[:remote_tun]] destination [command [argument ...]]
 ```
-Option `-p` is the port. So, if we want to connect the host `bandit.labs.overthewire.org`{:.info} with port `2220`{:.info} and the username is `bandit0`{:.info}, we could use: 
-```
-ssh bandit0
-```
+Option `-p` is the port. So, if we want to connect the host `bandit.labs.overthewire.org` with port `2220` and the username is `bandit0`, we could use: `ssh bandit0@bandit.labs.overthewire.org -p 2220`{:.warning}.
