@@ -23,3 +23,4 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
 Option `-p` is the port. So, if we want to connect the host `bandit.labs.overthewire.org`{:.info} with port `2220`{:.info} and the username is `bandit0`{:.info}, we could use: 
 ```
 ssh bandit0
+```
