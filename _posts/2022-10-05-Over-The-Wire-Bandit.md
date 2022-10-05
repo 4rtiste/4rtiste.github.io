@@ -21,7 +21,7 @@ usage: ssh [-46AaCfGgKkMNnqsTtVvXxYy] [-B bind_interface]
            [-w local_tun[:remote_tun]] destination [command [argument ...]]
 ```
 Option **`-p`** is the port. So, if we want to connect the host **`bandit.labs.overthewire.org`** with port **`2220`** and the username is **`bandit0`**, we could use: **`ssh bandit0@bandit.labs.overthewire.org -p 2220`{:.warning}**.
-```zsh
+```bash
 ┌──(kali㉿kali)-[~]
 └─$ ssh bandit0@bandit.labs.overthewire.org -p 2220
                          _                     _ _ _   
