@@ -138,3 +138,66 @@ bandit3@bandit:~/inhere$ cat .hidden
 ```
 **Password: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe**
 {:.success}
+# Level 4 → Level 5
+*"The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command."*
+<p align="center">
+---
+</p>
+
+Here, there's a folder `inhere` again, and this time, we have 10 files in it.
+```zsh
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ cd inhere/
+bandit4@bandit:~/inhere$ ls -a1
+.
+..
+-file00
+-file01
+-file02
+-file03
+-file04
+-file05
+-file06
+-file07
+-file08
+-file09
+```
+The simplest way is just access each file with **`cat`{:.warning}** until finding readable file. 
+```zsh
+bandit4@bandit:~/inhere$ cat ./-file00
+��Q�6
+     ▒�V����gH��b���v��Qȇ�bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file01
+▒q$`8��&[S�S����IE����2;bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file02
+�G)=I��O� 
+          $܌۶&������/v���%�bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file03
+���&���l���r�▒QEd8�tQ׼��e����Obandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file04
+
+
+���ٷxw�Diz�;�B���m�z�������bandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file05
+��!��>E�+�����"�K�bg
+                    ����
+��I=4bandit4@bandit:~/inhere$ cat ./-file06
+^�f����s�_��c�$!C��j�?迟�Mtbandit4@bandit:~/inhere$ 
+bandit4@bandit:~/inhere$ cat ./-file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+```
+Or we could use **`cat ./-file0*`{:.warning}**, it will show all content of files which have **`-file0`** in their name.
+```zsh
+bandit4@bandit:~/inhere$ cat ./-file0*
+��Q�6
+     ▒�V����gH��b���v��Qȇ�▒q$`8��&[S�S����IE����2;�G)=I��O� 
+                                                            $܌۶&������/v���%����&���l���r�▒QEd8�tQ׼��e����O
+
+                                                                                                           ���ٷxw�Diz�;�B���m�z���������!��>E�+�����"�K�bg
+                                                                                                                                                          ����
+��I=4^�f����s�_��c�$!C��j�?迟�MtlrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+�O��\�p�1سNF���z�#Z�Z`�#ї
+\�(�J,l6��e���PT4"��:�����~`�q
+``` 
+But these ways have one problem, they show all contents of file, which have lots of unreadable bytes. So we need another solution to fixing this.
