@@ -164,7 +164,7 @@ bandit4@bandit:~/inhere$ ls -a1
 -file09
 ```
 The simplest way is just access each file with **`cat`{:.warning}** until finding readable file. 
-```zsh
+```console
 bandit4@bandit:~/inhere$ cat ./-file00
 ��Q�6
      ▒�V����gH��b���v��Qȇ�bandit4@bandit:~/inhere$ 
@@ -188,7 +188,7 @@ bandit4@bandit:~/inhere$ cat ./-file07
 lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
 ```
 Or we could use **`cat ./-file0*`{:.warning}**, it will show all content of files which have **`-file0`** in their name.
-```zsh
+```console
 bandit4@bandit:~/inhere$ cat ./-file0*
 ��Q�6
      ▒�V����gH��b���v��Qȇ�▒q$`8��&[S�S����IE����2;�G)=I��O� 
