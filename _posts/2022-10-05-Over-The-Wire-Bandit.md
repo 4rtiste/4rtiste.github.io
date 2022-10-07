@@ -235,9 +235,7 @@ bandit4@bandit:~$
 ---
 </p>
 
-Using command **`ll`{:.warning}** we found that there are 20 folders and in each folder there are lots of file too.
-
-So, we could use the solution from last state, and add 1 option **`-size`{:.warning}** to find exectly 1033 bytes in size.
+Using command **`ll`{:.warning}** we found that there are 20 folders and in each folder there are lots of file too. So, we could use the solution from last state, and add 1 option **`-size`{:.warning}** to find exectly 1033 bytes in size.
 
 Full command: **`find . -type f -size 1033c`{:.warning}**
 ```zsh
@@ -251,3 +249,13 @@ P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 ```
 **Password: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU**
 {:.success}
+# Level 6 → Level 7
+*The password for the next level is stored somewhere on the server and has all of the following properties:*
+
+- *owned by user bandit7*
+- *owned by group bandit6*
+- *33 bytes in size*
+<p align="center">
+---
+</p>
+
