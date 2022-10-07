@@ -202,3 +202,26 @@ bandit4@bandit:~/inhere$ cat ./-file0*
 \�(�J,l6��e���PT4"��:�����~`�q
 ``` 
 But these ways have one problem, they show all contents of file, which have lots of unreadable bytes. So we need another solution to fixing this.
+
+Let use **`find`{:.warning}**, here we use option **`-type f`{:.warning}** for searching regular file and put together with xargs to execute command lines (here is **`file`{:.warning}**) to files we found. The result will give us type of files in folder. After that just cat the file.
+```zsh
+bandit4@bandit:~$ find . -type f | xargs file
+./.profile:       ASCII text
+./.bashrc:        ASCII text
+./.bash_logout:   ASCII text
+./inhere/-file03: data
+./inhere/-file04: data
+./inhere/-file09: data
+./inhere/-file07: ASCII text
+./inhere/-file08: data
+./inhere/-file06: data
+./inhere/-file05: data
+./inhere/-file01: data
+./inhere/-file02: data
+./inhere/-file00: OpenPGP Public Key
+bandit4@bandit:~$ cat ./inhere/-file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+bandit4@bandit:~$ 
+```
+**Password: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR**
+{:.success}
