@@ -203,7 +203,7 @@ bandit4@bandit:~/inhere$ cat ./-file0*
 ``` 
 But these ways have one problem, they show all contents of file, which have lots of unreadable bytes. So we need another solution to fixing this.
 
-Let use **`find`{:.warning}**, here we use option **`-type f`{:.warning}** for searching regular file and put together with xargs to execute command lines (here is **`file`{:.warning}**) to files we found. The result will give us type of files in folder. After that just cat the file.
+Let use **`find`{:.warning}**, here we use option **`-type f`{:.warning}** for searching regular file and put together with **`xargs`{:.warning}** to execute command lines (here is **`file`{:.warning}**) to files we found. The result will give us type of files in folder. After that just cat the file.
 ```zsh
 bandit4@bandit:~$ find . -type f | xargs file
 ./.profile:       ASCII text
@@ -235,3 +235,19 @@ bandit4@bandit:~$
 ---
 </p>
 
+Using command **`ll`{:.warning}** we found that there are 20 folders and in each folder there are lots of file too.
+
+So, we could use the solution from last state, and add 1 option **`-size`{:.warning}** to find exectly 1033 bytes in size.
+
+Full command: **`find . -type f -size 1033c`{:.warning}**
+```zsh
+bandit5@bandit:~/inhere$ find . -type f -size 1033c
+./maybehere07/.file2
+```
+And the final work is cat the file.
+```zsh
+bandit5@bandit:~/inhere$ cat ./maybehere07/.file2
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+```
+**Password: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU**
+{:.success}
