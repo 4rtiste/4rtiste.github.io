@@ -259,3 +259,30 @@ P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
 ---
 </p>
 
+Continue using **`find`{:.warning}** and change options to suit requirements with **`-group`{:.warning}** and **`-user`{:.warning}**. But even with those options, there still have lots of results. 
+```zsh
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c -type f
+find: ‘/var/tmp/shujaa29’: Permission denied
+find: ‘/var/tmp/systemd-private-a83ff8463b764265be181d9099810e8a-systemd-resolved.service-G8gzCb’: Permission denied
+find: ‘/var/tmp/systemd-private-a83ff8463b764265be181d9099810e8a-ModemManager.service-rszciW’: Permission denied
+find: ‘/var/tmp/systemd-private-a83ff8463b764265be181d9099810e8a-systemd-logind.service-8umSGY’: Permission denied
+find: ‘/var/tmp/systemd-private-a83ff8463b764265be181d9099810e8a-chrony.service-d2OXSp’: Permission denied
+find: ‘/var/snap/lxd/common/lxd’: Permission denied
+find: ‘/var/lib/amazon’: Permission denied
+find: ‘/var/lib/chrony’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/udisks2’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+...
+```
+So, the idea is combining that command with **`grep`{:.warning}** to find exacly the file which have `password` in filename. 
+
+The full command is **`find / -user bandit7 -group bandit6 -size 33c -type f 2>&1 | grep password`{:.warning}**
+```zsh
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c -type f 2>&1 | grep password
+/var/lib/dpkg/info/bandit7.password
+find: ‘/run/systemd/ask-password-block’: Permission denied
+```
+
+**Note: `2>&1` means redirect the stderr (`>2`) to where stdout is being redirected to (`&1`).**
+{:.warning}
