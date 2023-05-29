@@ -1,8 +1,7 @@
 ---
-title: Writeup BalsnCTF 2022 - Yet another RSA with hint
+title: Number theory (introduction level)
 tags: cryptography
-cover: /assets/images/logo/background.png
+cover: /assets/images/logo/bg.png
 ---
 
-
-test
+# Euclidean algorithm, extend Euclidean
