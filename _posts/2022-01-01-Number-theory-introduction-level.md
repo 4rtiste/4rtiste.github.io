@@ -4,4 +4,4 @@ tags: cryptography
 cover: /assets/images/logo/bg.png
 ---
 
-# Euclidean algorithm, extend Euclidean
+## Euclidean algorithm, extend Euclidean
