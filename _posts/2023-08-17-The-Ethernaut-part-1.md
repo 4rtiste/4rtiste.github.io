@@ -13,5 +13,5 @@ article_header:
 
 ## Level 0 - Hello Ethernaut
 <p style="text-align:center;">
-    <img class="image image--md" src="/assets/images/ethernaut/lv0.png"/>
+    <img class="image image--xl" src="/assets/images/ethernaut/lv0.png"/>
 </p>
