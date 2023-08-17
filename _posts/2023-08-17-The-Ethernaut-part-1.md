@@ -8,6 +8,6 @@ header:
 article_header:
   type: cover
   image:
-    src: /assets/images/ethernaut/ethernaut.png
+    src: /assets/images/ethernaut/aaa@4x.png
 ---
 
