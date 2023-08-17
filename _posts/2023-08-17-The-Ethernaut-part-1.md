@@ -4,7 +4,7 @@ tags: wargame blockchain
 cover: /assets/images/ethernaut/the_ethernaut.png
 mode: immersive
 article_header:
-  type: cover
+  type: overlay
   image:
     src: /assets/images/ethernaut/ethernaut.png
 ---
