@@ -13,7 +13,7 @@ article_header:
 
 ## Level 0 - Hello Ethernaut
 <p style="text-align:center;">
-    <img class="image image--xl" src="/assets/images/ethernaut/lv0@4x.png"/>
+    <img class="image image--xxl" src="/assets/images/ethernaut/lv0@4x.png"/>
 </p>
 
 This level is tutorial to The Ethernaut and how to interact with the ABI (Application Binary Interface). As step 9 in the tutorial, we should look into level info by the `await contract.info()`.
