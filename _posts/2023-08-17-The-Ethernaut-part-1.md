@@ -11,9 +11,9 @@ article_header:
     src: /assets/images/ethernaut/aaa@4x.png
 ---
 
-# Level 0 - Hello Ethernaut
+## Level 0 - Hello Ethernaut
 <p style="text-align:center;">
-    <img class="image image--xl" src="/assets/images/ethernaut/lv0.png"/>
+    <img class="image image--xl" src="/assets/images/ethernaut/lv0@4x.png"/>
 </p>
 
 This level is tutorial to The Ethernaut and how to interact with the ABI (Application Binary Interface). As step 9 in the tutorial, we should look into level info by the `await contract.info()`.
@@ -48,7 +48,8 @@ Now the goal is to find the password and then submit to authenticate. Check agai
 ```
 
 Accept the Authenticate transaction in Metamask and done level 0.
-## Level 1
+## Level 1 - Fallback
+This level give the source code.
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
